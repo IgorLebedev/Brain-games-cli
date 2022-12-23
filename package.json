@@ -19,6 +19,13 @@
   "homepage": "https://github.com/IgorLebedev/frontend-project-44#readme",
   "bin": {
     "brain-games": "bin/brain-games.js"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "eslint": "^8.30.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
   }
 }
-
