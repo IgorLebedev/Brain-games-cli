@@ -18,11 +18,11 @@ const brainEven = () => {
       console.log('Correct!');
       rounds += 1;
     } else if (!correctAnswrNo) {
-      console.log(`\'${answer}\' is wrong answer ;(. Correct answer was 'no'.\nLet's try again ${userName}`);
-      rounds += 4;
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again ${userName}`);
+      break;
     } else if (!correctAnswrYes) {
-      console.log(`\'${answer}\' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again ${userName}`);
-      rounds += 4;
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again ${userName}`);
+      break;
     }
   } while (rounds < 3);
   if (rounds === 3) {
