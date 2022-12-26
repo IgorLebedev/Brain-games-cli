@@ -7,4 +7,24 @@ export const sayHelloAndGetName = () => {
   return userName;
 };
 
-export const randomNum = Math.round(Math.random() * 10);
+export const getRandomNum = (untilNumber) => {
+  const result = Math.ceil(Math.random() * untilNumber);
+  return result;
+};
+
+export const victoryCondition = (rounds, userName) => {
+  if (rounds === 3) {
+    console.log(`Congratulations, ${userName}!`);
+  }
+};
+
+//  MUST MAKE IT LATER 
+// export const compareAnswers = () => {
+//   if (correctAnswr) {
+//     console.log('Correct!');
+//     rounds += 1;
+//   } else if (!correctAnswr) {
+//     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again ${userName}`);
+//     break;
+//   }
+// };
