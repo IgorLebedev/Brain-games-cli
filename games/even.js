@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
-import { sayHelloAndGetName } from '../src/index.js';
+import { sayHelloAndGetName, getRandomNum, victoryCondition } from '../src/index.js';
 
-const brainEven = () => {
+const startGame = () => {
   const userName = sayHelloAndGetName();
 
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
@@ -9,11 +9,10 @@ const brainEven = () => {
   let rounds = 0;
 
   do {
-    const randomNum = Math.round(Math.random() * 10);
-    console.log(`Question: ${randomNum}`);
+    console.log(`Question: ${getRandomNum()}`);
     const answer = readlineSync.question('Your Answer: ');
-    const correctAnswrYes = answer === 'yes' && randomNum % 2 === 0;
-    const correctAnswrNo = answer === 'no' && randomNum % 2 !== 0;
+    const correctAnswrYes = answer === 'yes' && getRandomNum() % 2 === 0;
+    const correctAnswrNo = answer === 'no' && getRandomNum() % 2 !== 0;
     if (correctAnswrYes || correctAnswrNo) {
       console.log('Correct!');
       rounds += 1;
@@ -25,9 +24,7 @@ const brainEven = () => {
       break;
     }
   } while (rounds < 3);
-  if (rounds === 3) {
-    console.log(`Congratulations, ${userName}`);
-  }
+  victoryCondition(rounds, userName);
 };
 
-export default brainEven;
+export default startGame;

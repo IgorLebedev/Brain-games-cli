@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
-import { sayHelloAndGetName } from '../src/index.js';
+import { sayHelloAndGetName, getRandomNum, victoryCondition } from '../src/index.js';
 
-const brainCalc = () => {
+const startGame = () => {
   const userName = sayHelloAndGetName();
 
   console.log('What is the result of the expression?');
@@ -9,38 +9,36 @@ const brainCalc = () => {
   let rounds = 0;
   const operators = ['+', '-', '*'];
   do {
-    const randomIndex = Math.floor(Math.random() * 3);
-    const randomNumOne = Math.round(Math.random() * 10);
-    const randomNumTwo = Math.round(Math.random() * 10);
-    let resultRandom;
+    const randomIndex = getRandomNum(2);
+    const randomNumOne = getRandomNum(10);
+    const randomNumTwo = getRandomNum(10);
+    let result;
     switch (operators[randomIndex]) {
       case '+':
         console.log(`Question: ${randomNumOne.toString()} + ${randomNumTwo.toString()}`);
-        resultRandom = randomNumOne + randomNumTwo;
+        result = randomNumOne + randomNumTwo;
         break;
       case '-':
         console.log(`Question: ${randomNumOne.toString()} - ${randomNumTwo.toString()}`);
-        resultRandom = randomNumOne - randomNumTwo;
+        result = randomNumOne - randomNumTwo;
         break;
       case '*':
         console.log(`Question: ${randomNumOne.toString()} * ${randomNumTwo.toString()}`);
-        resultRandom = randomNumOne * randomNumTwo;
+        result = randomNumOne * randomNumTwo;
         break;
       default:
     }
     const answer = readlineSync.question('Your Answer: ');
-    const correctAnswr = resultRandom === Number(answer);
+    const correctAnswr = result === Number(answer);
     if (correctAnswr) {
       console.log('Correct!');
       rounds += 1;
     } else if (!correctAnswr) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${resultRandom}'.\nLet's try again ${userName}`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again ${userName}`);
       break;
     }
   } while (rounds < 3);
-  if (rounds === 3) {
-    console.log(`Congratulations, ${userName}`);
-  }
+  victoryCondition(rounds, userName);
 };
 
-export default brainCalc;
+export default startGame;
