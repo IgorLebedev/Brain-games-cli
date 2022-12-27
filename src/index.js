@@ -7,8 +7,8 @@ export const sayHelloAndGetName = () => {
   return userName;
 };
 
-export const getRandomNum = (untilNumber) => {
-  const result = Math.ceil(Math.random() * untilNumber);
+export const getRandomNum = (min, max) => {
+  const result = Math.floor(min + Math.random() * (max + 1 - min));
   return result;
 };
 
@@ -18,7 +18,7 @@ export const victoryCondition = (rounds, userName) => {
   }
 };
 
-//  MUST MAKE IT LATER 
+//  MUST MAKE IT LATER
 // export const compareAnswers = () => {
 //   if (correctAnswr) {
 //     console.log('Correct!');
