@@ -25,7 +25,7 @@ const startGame = () => {
       console.log('Correct!');
       rounds += 1;
     } else if (!isCorrectAnswer) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again ${userName}!`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${userName}!`);
       break;
     }
   } while (rounds < 3);
