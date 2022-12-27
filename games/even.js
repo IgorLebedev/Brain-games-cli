@@ -9,18 +9,19 @@ const startGame = () => {
   let rounds = 0;
 
   do {
-    console.log(`Question: ${getRandomNum()}`);
+    const randomNum = getRandomNum(1, 100);
+    console.log(`Question: ${randomNum}`);
+    let result;
+    if (randomNum % 2 === 0) {
+      result = 'yes';
+    } else result = 'no';
     const answer = readlineSync.question('Your Answer: ');
-    const correctAnswrYes = answer === 'yes' && getRandomNum() % 2 === 0;
-    const correctAnswrNo = answer === 'no' && getRandomNum() % 2 !== 0;
-    if (correctAnswrYes || correctAnswrNo) {
+    const correctAnswer = answer === result;
+    if (correctAnswer) {
       console.log('Correct!');
       rounds += 1;
-    } else if (!correctAnswrNo) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again ${userName}`);
-      break;
-    } else if (!correctAnswrYes) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again ${userName}`);
+    } else if (!correctAnswer) {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again ${userName}`);
       break;
     }
   } while (rounds < 3);

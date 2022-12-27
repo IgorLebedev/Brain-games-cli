@@ -9,21 +9,21 @@ const startGame = () => {
   let rounds = 0;
   const operators = ['+', '-', '*'];
   do {
-    const randomIndex = getRandomNum(2);
-    const randomNumOne = getRandomNum(10);
-    const randomNumTwo = getRandomNum(10);
+    const randomIndex = getRandomNum(0, 2);
+    const randomNumOne = getRandomNum(1, 10);
+    const randomNumTwo = getRandomNum(1, 10);
     let result;
     switch (operators[randomIndex]) {
       case '+':
-        console.log(`Question: ${randomNumOne.toString()} + ${randomNumTwo.toString()}`);
+        console.log(`Question: ${randomNumOne} + ${randomNumTwo}`);
         result = randomNumOne + randomNumTwo;
         break;
       case '-':
-        console.log(`Question: ${randomNumOne.toString()} - ${randomNumTwo.toString()}`);
+        console.log(`Question: ${randomNumOne} - ${randomNumTwo}`);
         result = randomNumOne - randomNumTwo;
         break;
       case '*':
-        console.log(`Question: ${randomNumOne.toString()} * ${randomNumTwo.toString()}`);
+        console.log(`Question: ${randomNumOne} * ${randomNumTwo}`);
         result = randomNumOne * randomNumTwo;
         break;
       default:
