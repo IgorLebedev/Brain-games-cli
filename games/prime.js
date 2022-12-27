@@ -4,7 +4,7 @@ import { sayHelloAndGetName, getRandomNum, victoryCondition } from '../src/index
 const startGame = () => {
   const userName = sayHelloAndGetName();
 
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no"');
+  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
   let rounds = 0;
   do {
@@ -21,12 +21,12 @@ const startGame = () => {
     } else result = 'no';
     console.log(randomNum);
     const answer = readlineSync.question('Your Answer: ');
-    const correctAnswr = result === answer;
-    if (correctAnswr) {
+    const isCorrectAnswer = result === answer;
+    if (isCorrectAnswer) {
       console.log('Correct!');
       rounds += 1;
-    } else if (!correctAnswr) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again ${userName}`);
+    } else if (!isCorrectAnswer) {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again ${userName}!`);
       break;
     }
   } while (rounds < 3);

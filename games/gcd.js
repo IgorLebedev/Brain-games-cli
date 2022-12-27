@@ -33,12 +33,12 @@ const startGame = () => {
     }
     console.log(`Question: ${randomNumOne} ${randomNumTwo}`);
     const answer = readlineSync.question('Your Answer: ');
-    const correctAnswr = result === Number(answer);
-    if (correctAnswr) {
+    const isCorrectAnswer = result === Number(answer);
+    if (isCorrectAnswer) {
       console.log('Correct!');
       rounds += 1;
-    } else if (!correctAnswr) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again ${userName}`);
+    } else if (!isCorrectAnswer) {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again ${userName}!`);
       break;
     }
   } while (rounds < 3);

@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { sayHelloAndGetName, getRandomNum, victoryCondition } from '../src/index.js';
+import { sayHelloAndGetName, getRandomNum, victoryCondition, compareAnswers } from '../src/index.js';
 
 const startGame = () => {
   const userName = sayHelloAndGetName();
@@ -29,12 +29,12 @@ const startGame = () => {
       default:
     }
     const answer = readlineSync.question('Your Answer: ');
-    const correctAnswr = result === Number(answer);
-    if (correctAnswr) {
+    const isCorrectAnswer = result === Number(answer);
+    if (isCorrectAnswer) {
       console.log('Correct!');
       rounds += 1;
-    } else if (!correctAnswr) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again ${userName}`);
+    } else if (!isCorrectAnswer) {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again ${userName}!`);
       break;
     }
   } while (rounds < 3);
