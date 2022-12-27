@@ -3,9 +3,7 @@ import { sayHelloAndGetName, getRandomNum, victoryCondition } from '../src/index
 
 const startGame = () => {
   const userName = sayHelloAndGetName();
-
   console.log('What is the result of the expression?');
-
   let rounds = 0;
   const operators = ['+', '-', '*'];
   do {

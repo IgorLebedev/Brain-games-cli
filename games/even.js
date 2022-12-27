@@ -3,11 +3,8 @@ import { sayHelloAndGetName, getRandomNum, victoryCondition } from '../src/index
 
 const startGame = () => {
   const userName = sayHelloAndGetName();
-
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
-
   let rounds = 0;
-
   do {
     const randomNum = getRandomNum(1, 100);
     console.log(`Question: ${randomNum}`);

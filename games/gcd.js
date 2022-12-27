@@ -3,11 +3,8 @@ import { sayHelloAndGetName, getRandomNum, victoryCondition } from '../src/index
 
 const startGame = () => {
   const userName = sayHelloAndGetName();
-
   console.log('Find the greatest common divisor of given numbers.');
-
   let rounds = 0;
-
   do {
     const randomNumOne = getRandomNum(100);
     const randomNumTwo = getRandomNum(100);

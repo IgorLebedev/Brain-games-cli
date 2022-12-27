@@ -3,11 +3,8 @@ import { sayHelloAndGetName, getRandomNum, victoryCondition } from '../src/index
 
 const startGame = () => {
   const userName = sayHelloAndGetName();
-
   console.log('What number is missing in the progression?');
-
   let rounds = 0;
-
   do {
     const randomFirstNum = getRandomNum(1, 100);
     const randomStep = getRandomNum(1, 5);

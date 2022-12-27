@@ -3,9 +3,7 @@ import { sayHelloAndGetName, getRandomNum, victoryCondition } from '../src/index
 
 const startGame = () => {
   const userName = sayHelloAndGetName();
-
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-
   let rounds = 0;
   do {
     const randomNum = getRandomNum(1, 100);
