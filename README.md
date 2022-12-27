@@ -4,3 +4,4 @@
 [![Even Game Demo](https://asciinema.org/a/2UHvxcXC0qZ9CEG06FuRzFf8p.svg)](https://asciinema.org/a/2UHvxcXC0qZ9CEG06FuRzFf8p)
 [![Calc Game Demo](https://asciinema.org/a/b5Sl3hsO5IegvU2wMBVCTxLyD.svg)](https://asciinema.org/a/b5Sl3hsO5IegvU2wMBVCTxLyD)
 [![GDC Game Demo](https://asciinema.org/a/Oyp28NlYL6HxzfxOFvkOmZvLH.svg)](https://asciinema.org/a/Oyp28NlYL6HxzfxOFvkOmZvLH)
+[![Progression Game Deom](https://asciinema.org/a/vFkBXFrLnzFoo6WcMZOQIIKvA.svg)](https://asciinema.org/a/vFkBXFrLnzFoo6WcMZOQIIKvA)
