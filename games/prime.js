@@ -17,7 +17,7 @@ const startGame = () => {
     if (numOfDivisors === 2) {
       result = 'yes';
     } else result = 'no';
-    console.log(randomNum);
+    console.log(`'Question:' ${randomNum}`);
     const answer = readlineSync.question('Your Answer: ');
     const isCorrectAnswer = result === answer;
     if (isCorrectAnswer) {
