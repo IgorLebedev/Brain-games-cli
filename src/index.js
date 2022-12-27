@@ -17,12 +17,3 @@ export const victoryCondition = (rounds, userName) => {
     console.log(`Congratulations, ${userName}!`);
   }
 };
-
-// export const compareAnswers = (isCorrectAnswer, answer, result, userName) => {
-//   if (isCorrectAnswer) {
-//     console.log('Correct');
-//     rounds += 1;
-//   } else if (!isCorrectAnswer) {
-//     return `'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again ${userName}`;
-//   }
-// };
