@@ -6,8 +6,8 @@ const startGame = () => {
   console.log('Find the greatest common divisor of given numbers.');
   let rounds = 0;
   do {
-    const randomNumOne = getRandomNum(100);
-    const randomNumTwo = getRandomNum(100);
+    const randomNumOne = getRandomNum(1, 100);
+    const randomNumTwo = getRandomNum(1, 100);
     let result;
     if (randomNumOne > randomNumTwo) {
       for (let i = randomNumTwo; i > 0; i -= 1) {
