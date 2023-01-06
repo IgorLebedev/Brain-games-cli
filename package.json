@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
-  "description": "[![Actions Status](https://github.com/IgorLebedev/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/IgorLebedev/frontend-project-44/actions)",
+  "description": "Brain games is a set of five console games: even, calculator, greatest common divisor, progression, prime number",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
