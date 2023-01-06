@@ -15,10 +15,10 @@ Mind Games is a set of five console games based on popular mobile brain training
 ### How to deploy:  
 
 1. Clone project  
-<git clone git@github.com:IgorLebedev/frontend-project-44.git >  
+    git clone git@github.com:IgorLebedev/frontend-project-44.git  
 
-2. Install dependencies  
-<make install>
+2. Install dependencies
+    make install
 [![Even Game Demo](https://asciinema.org/a/2UHvxcXC0qZ9CEG06FuRzFf8p.svg)](https://asciinema.org/a/2UHvxcXC0qZ9CEG06FuRzFf8p)
 [![Calc Game Demo](https://asciinema.org/a/b5Sl3hsO5IegvU2wMBVCTxLyD.svg)](https://asciinema.org/a/b5Sl3hsO5IegvU2wMBVCTxLyD)
 [![GDC Game Demo](https://asciinema.org/a/Oyp28NlYL6HxzfxOFvkOmZvLH.svg)](https://asciinema.org/a/Oyp28NlYL6HxzfxOFvkOmZvLH)
