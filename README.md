@@ -1,3 +1,7 @@
+# Brain Games
+
+---
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/IgorLebedev/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/IgorLebedev/frontend-project-44/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/186253d14383626f4aa8/maintainability)](https://codeclimate.com/github/IgorLebedev/frontend-project-44/maintainability)  
@@ -5,7 +9,7 @@
 ---  
 
 ### Description:  
-Mind Games is a set of five console games based on popular mobile brain training apps. Each game asks questions that need to be answered correctly. After three correct answers, the game is considered to be completed. Wrong answers end the game and offer to play it again.  
+Brain Games is a set of five console games based on popular mobile brain training apps. Each game asks questions that need to be answered correctly. After three correct answers, the game is considered to be completed. Wrong answers end the game and offer to play it again.  
 
 ---  
 
