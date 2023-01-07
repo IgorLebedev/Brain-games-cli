@@ -1,45 +1,35 @@
-import readlineSync from 'readline-sync';
-import { sayHelloAndGetName, getRandomNum, victoryCondition } from '../index.js';
+import getRandomNum from '../utils.js';
+import startGame from '../index.js';
 
-const startGame = () => {
-  const userName = sayHelloAndGetName();
-  console.log('Find the greatest common divisor of given numbers.');
-  let rounds = 0;
-  do {
-    const randomNumOne = getRandomNum(1, 100);
-    const randomNumTwo = getRandomNum(1, 100);
-    let result;
-    if (randomNumOne > randomNumTwo) {
-      for (let i = randomNumTwo; i > 0; i -= 1) {
-        const greatestDivisorCondition = randomNumOne % i === 0 && randomNumTwo % i === 0;
-        if (greatestDivisorCondition) {
-          result = i;
-          break;
-        }
+const rules = 'Find the greatest common divisor of given numbers.';
+
+const getTaskAndAnswer = () => {
+  const taskAnswer = [];
+  const randomNumOne = getRandomNum(1, 100);
+  const randomNumTwo = getRandomNum(1, 100);
+  taskAnswer.push(`${randomNumOne} ${randomNumTwo}`);
+  if (randomNumOne > randomNumTwo) {
+    for (let i = randomNumTwo; i > 0; i -= 1) {
+      const greatestDivisorCondition = randomNumOne % i === 0 && randomNumTwo % i === 0;
+      if (greatestDivisorCondition) {
+        taskAnswer[1] = i.toString();
+        break;
       }
-    } else if (randomNumOne < randomNumTwo) {
-      for (let i = randomNumOne; i > 0; i -= 1) {
-        const greatestDivisorCondition = randomNumOne % i === 0 && randomNumTwo % i === 0;
-        if (greatestDivisorCondition) {
-          result = i;
-          break;
-        }
+    }
+  } else if (randomNumOne < randomNumTwo) {
+    for (let i = randomNumOne; i > 0; i -= 1) {
+      const greatestDivisorCondition = randomNumOne % i === 0 && randomNumTwo % i === 0;
+      if (greatestDivisorCondition) {
+        taskAnswer[1] = i.toString();
+        break;
       }
-    } else if (randomNumOne === randomNumTwo) {
-      result = randomNumOne;
     }
-    console.log(`Question: ${randomNumOne} ${randomNumTwo}`);
-    const answer = readlineSync.question('Your Answer: ');
-    const isCorrectAnswer = result === Number(answer);
-    if (isCorrectAnswer) {
-      console.log('Correct!');
-      rounds += 1;
-    } else if (!isCorrectAnswer) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${userName}!`);
-      break;
-    }
-  } while (rounds < 3);
-  victoryCondition(rounds, userName);
+  } else if (randomNumOne === randomNumTwo) {
+    taskAnswer[1] = randomNumOne.toString();
+  }
+  return taskAnswer;
 };
 
-export default startGame;
+const startGcd = () => startGame(rules, getTaskAndAnswer);
+
+export default startGcd;
