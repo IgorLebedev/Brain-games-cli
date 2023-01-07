@@ -18,7 +18,7 @@ const startGame = (rules, taskAnswer) => {
       return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
     }
   }
-  console.log(`Congratulations, ${userName}!`);
+  return console.log(`Congratulations, ${userName}!`);
 };
 
 export default startGame;
