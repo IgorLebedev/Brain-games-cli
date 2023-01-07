@@ -1,18 +1,20 @@
-import readlineSync from 'readline-sync';
-import getRandomNum from '../utils.js'
-import { sayHelloAndGetName } from '../index.js';
+import getRandomNum from '../utils.js';
+import startGame from '../index.js';
 
-const userName = sayHelloAndGetName();
 const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
-const isEven = () => {
-  const taskAnswerArr = [task, answer];
+
+const getTaskAndAnswer = () => {
+  const taskAnswerArr = [];
   const randomNum = getRandomNum(1, 100);
-  let result;
+  taskAnswerArr.push(randomNum);
   if (randomNum % 2 === 0) {
-    result = 'yes';
-  } else result = 'no';
-  const answer = readlineSync.question('Your Answer: ');
-  const isCorrectAnswer = answer === result;
+    taskAnswerArr.push('yes');
+  } else {
+    taskAnswerArr.push('no');
+  }
+  return taskAnswerArr;
 };
 
-export default startGame;
+const startEven = () => startGame(rules, getTaskAndAnswer);
+
+export default startEven;
