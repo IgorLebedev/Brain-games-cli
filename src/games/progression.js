@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { sayHelloAndGetName, getRandomNum, victoryCondition } from '../src/index.js';
+import { sayHelloAndGetName, getRandomNum, victoryCondition } from '../index.js';
 
 const startGame = () => {
   const userName = sayHelloAndGetName();

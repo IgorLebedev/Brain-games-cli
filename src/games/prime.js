@@ -1,19 +1,26 @@
 import readlineSync from 'readline-sync';
-import { sayHelloAndGetName, getRandomNum, victoryCondition } from '../src/index.js';
+import { getRandomNum } from '../utils.js';
+import { sayHelloAndGetName, getRandomNum, victoryCondition } from '../index.js';
 
 const startGame = () => {
   const userName = sayHelloAndGetName();
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   let rounds = 0;
   do {
     const randomNum = getRandomNum(1, 100);
-    console.log(`Question: ${randomNum}`);
+    let numOfDivisors = 0;
+    for (let i = 1; i <= randomNum; i += 1) {
+      if (randomNum % i === 0) {
+        numOfDivisors += 1;
+      }
+    }
     let result;
-    if (randomNum % 2 === 0) {
+    if (numOfDivisors === 2) {
       result = 'yes';
     } else result = 'no';
+    console.log(`Question: ${randomNum}`);
     const answer = readlineSync.question('Your Answer: ');
-    const isCorrectAnswer = answer === result;
+    const isCorrectAnswer = result === answer;
     if (isCorrectAnswer) {
       console.log('Correct!');
       rounds += 1;
