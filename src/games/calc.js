@@ -1,42 +1,34 @@
-import readlineSync from 'readline-sync';
-import { sayHelloAndGetName, getRandomNum, victoryCondition } from '../index.js';
+import getRandomNum from '../utils.js';
+import startGame from '../index.js';
 
-const startGame = () => {
-  const userName = sayHelloAndGetName();
-  console.log('What is the result of the expression?');
-  let rounds = 0;
+const rules = 'What is the result of the expression?';
+
+const getTaskAndAnswer = () => {
+  const taskAnswer = [];
   const operators = ['+', '-', '*'];
-  do {
-    const randomIndex = getRandomNum(0, 2);
-    const randomNumOne = getRandomNum(1, 10);
-    const randomNumTwo = getRandomNum(1, 10);
-    let result;
-    switch (operators[randomIndex]) {
-      case '+':
-        console.log(`Question: ${randomNumOne} + ${randomNumTwo}`);
-        result = randomNumOne + randomNumTwo;
-        break;
-      case '-':
-        console.log(`Question: ${randomNumOne} - ${randomNumTwo}`);
-        result = randomNumOne - randomNumTwo;
-        break;
-      case '*':
-        console.log(`Question: ${randomNumOne} * ${randomNumTwo}`);
-        result = randomNumOne * randomNumTwo;
-        break;
-      default:
-    }
-    const answer = readlineSync.question('Your Answer: ');
-    const isCorrectAnswer = result === Number(answer);
-    if (isCorrectAnswer) {
-      console.log('Correct!');
-      rounds += 1;
-    } else if (!isCorrectAnswer) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${userName}!`);
+  const randomIndex = getRandomNum(0, 2);
+  const randomNumOne = getRandomNum(1, 10);
+  const randomNumTwo = getRandomNum(1, 10);
+  const operator = operators[randomIndex];
+  switch (operator) {
+    case '+':
+      taskAnswer.push(`${randomNumOne} + ${randomNumTwo}`);
+      taskAnswer.push((randomNumOne + randomNumTwo).toString());
       break;
-    }
-  } while (rounds < 3);
-  victoryCondition(rounds, userName);
+    case '-':
+      taskAnswer.push(`${randomNumOne} - ${randomNumTwo}`);
+      taskAnswer.push((randomNumOne - randomNumTwo).toString());
+      break;
+    case '*':
+      taskAnswer.push(`${randomNumOne} * ${randomNumTwo}`);
+      taskAnswer.push((randomNumOne * randomNumTwo).toString());
+      break;
+    default:
+      throw new Error(`Unknown operator: '${operator}'!`);
+  }
+  return taskAnswer;
 };
 
-export default startGame;
+const startCalc = () => startGame(rules, getTaskAndAnswer);
+
+export default startCalc;
