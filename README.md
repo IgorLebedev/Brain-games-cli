@@ -24,7 +24,7 @@ Brain Games is a set of five console games based on popular mobile brain trainin
 ### How to deploy:  
 1. Clone project
 
-        git clone git@github.com:IgorLebedev/ frontend-project-44.git 
+        git clone git@github.com:IgorLebedev/frontend-project-44.git 
 2. Install dependencies
 
         make install
