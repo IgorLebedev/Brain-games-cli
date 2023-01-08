@@ -9,7 +9,7 @@ const getTaskAndAnswer = () => {
   const randomNumTwo = getRandomNum(1, 100);
   const taskToPush = `${randomNumOne} ${randomNumTwo}`;
   taskAnswer.push(taskToPush);
-  if (randomNumOne > randomNumTwo) {
+  if (randomNumOne >= randomNumTwo) {
     for (let i = randomNumTwo; i > 0; i -= 1) {
       const greatestDivisorCondition = randomNumOne % i === 0 && randomNumTwo % i === 0;
       if (greatestDivisorCondition) {
@@ -17,7 +17,7 @@ const getTaskAndAnswer = () => {
         break;
       }
     }
-  } else if (randomNumOne < randomNumTwo) {
+  } else if (randomNumOne <= randomNumTwo) {
     for (let i = randomNumOne; i > 0; i -= 1) {
       const greatestDivisorCondition = randomNumOne % i === 0 && randomNumTwo % i === 0;
       if (greatestDivisorCondition) {
@@ -25,8 +25,6 @@ const getTaskAndAnswer = () => {
         break;
       }
     }
-  } else if (randomNumOne === randomNumTwo) {
-    taskAnswer[1] = randomNumOne.toString();
   }
   return taskAnswer;
 };
