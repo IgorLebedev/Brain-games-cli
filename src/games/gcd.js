@@ -13,14 +13,12 @@ const getTaskAndAnswer = () => {
     for (let i = randomNumTwo; i > 0; i -= 1) {
       if (randomNumOne % i === 0 && randomNumTwo % i === 0) {
         taskAnswer[1] = i.toString();
-        break;
       }
     }
   } else {
     for (let i = randomNumOne; i > 0; i -= 1) {
       if (randomNumOne % i === 0 && randomNumTwo % i === 0) {
         taskAnswer[1] = i.toString();
-        break;
       }
     }
   }
