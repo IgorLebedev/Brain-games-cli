@@ -17,7 +17,7 @@ const getTaskAndAnswer = () => {
         break;
       }
     }
-  } else if (randomNumOne <= randomNumTwo) {
+  } else {
     for (let i = randomNumOne; i > 0; i -= 1) {
       const greatestDivisorCondition = randomNumOne % i === 0 && randomNumTwo % i === 0;
       if (greatestDivisorCondition) {
