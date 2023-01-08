@@ -10,17 +10,15 @@ const getTaskAndAnswer = () => {
   const randomNumOne = getRandomNum(1, 10);
   const randomNumTwo = getRandomNum(1, 10);
   const operator = operators[randomIndex];
+  taskAnswer.push(`${randomNumOne} ${operator} ${randomNumTwo}`);
   switch (operator) {
     case '+':
-      taskAnswer.push(`${randomNumOne} + ${randomNumTwo}`);
       taskAnswer.push((randomNumOne + randomNumTwo).toString());
       break;
     case '-':
-      taskAnswer.push(`${randomNumOne} - ${randomNumTwo}`);
       taskAnswer.push((randomNumOne - randomNumTwo).toString());
       break;
     case '*':
-      taskAnswer.push(`${randomNumOne} * ${randomNumTwo}`);
       taskAnswer.push((randomNumOne * randomNumTwo).toString());
       break;
     default:
