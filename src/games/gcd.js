@@ -7,7 +7,8 @@ const getTaskAndAnswer = () => {
   const taskAnswer = [];
   const randomNumOne = getRandomNum(1, 100);
   const randomNumTwo = getRandomNum(1, 100);
-  taskAnswer.push(`${randomNumOne} ${randomNumTwo}`);
+  const taskToPush = `${randomNumOne} ${randomNumTwo}`;
+  taskAnswer.push(taskToPush);
   if (randomNumOne > randomNumTwo) {
     for (let i = randomNumTwo; i > 0; i -= 1) {
       const greatestDivisorCondition = randomNumOne % i === 0 && randomNumTwo % i === 0;
