@@ -3,20 +3,21 @@ import startGame from '../index.js';
 
 const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const getTaskAndAnswer = () => {
-  const taskAnswer = [];
-  const randomNum = getRandomNum(1, 100);
-  taskAnswer.push(randomNum);
-  let numOfDivisors = 0;
-  for (let i = 1; i <= randomNum; i += 1) {
-    if (randomNum % i === 0) {
+const isPrime = (num) => {
+  let numOfDivisors = 1;
+  for (let i = 1; i <= num / 2; i += 1) {
+    if (num % i === 0) {
       numOfDivisors += 1;
     }
   }
-  if (numOfDivisors === 2) {
-    taskAnswer.push('yes');
-  } else taskAnswer.push('no');
-  return taskAnswer;
+  return numOfDivisors === 2 ? 'yes' : 'no';
+};
+
+const getTaskAndAnswer = () => {
+  const randomNum = getRandomNum(1, 3);
+  const question = randomNum;
+  const correctAnswer = isPrime(randomNum);
+  return [question, correctAnswer];
 };
 
 const startPrime = () => startGame(rules, getTaskAndAnswer);
