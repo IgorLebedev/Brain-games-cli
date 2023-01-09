@@ -3,14 +3,14 @@ import startGame from '../index.js';
 
 const rules = 'What is the result of the expression?';
 
-const getResult = (operator, firstNum, SecondNum) => {
+const getResult = (operator, firstNum, secondNum) => {
   switch (operator) {
     case '+':
-      return ((firstNum + SecondNum).toString());
+      return ((firstNum + secondNum).toString());
     case '-':
-      return ((firstNum - SecondNum).toString());
+      return ((firstNum - secondNum).toString());
     case '*':
-      return ((firstNum * SecondNum).toString());
+      return ((firstNum * secondNum).toString());
     default:
       throw new Error(`Unknown operator: '${operator}'!`);
   }
