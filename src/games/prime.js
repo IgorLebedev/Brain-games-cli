@@ -10,13 +10,13 @@ const isPrime = (num) => {
       numOfDivisors += 1;
     }
   }
-  return numOfDivisors === 2 ? 'yes' : 'no';
+  return numOfDivisors === 2;
 };
 
 const getTaskAndAnswer = () => {
   const randomNum = getRandomNum(1, 3);
   const question = randomNum;
-  const correctAnswer = isPrime(randomNum);
+  const correctAnswer = isPrime(randomNum) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 
