@@ -13,12 +13,11 @@ const getGcd = (a, b) => {
 };
 
 const getTaskAndAnswer = () => {
-  const taskAnswer = [];
   const randomNumOne = getRandomNum(1, 100);
   const randomNumTwo = getRandomNum(1, 100);
-  taskAnswer.push(`${randomNumOne} ${randomNumTwo}`);
-  taskAnswer[1] = (getGcd(randomNumOne, randomNumTwo)).toString();
-  return taskAnswer;
+  const question = `${randomNumOne} ${randomNumTwo}`;
+  const correctAnswer = (getGcd(randomNumOne, randomNumTwo)).toString();
+  return [question, correctAnswer];
 };
 
 const startGcd = () => startGame(rules, getTaskAndAnswer);
