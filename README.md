@@ -35,20 +35,20 @@ Brain Games is a set of five console games based on popular mobile brain trainin
 #### 1. Even game
 The user is shown a random number. And he needs to answer yes if the number is even, or no if it is odd.
 
-[![Even Game Demo](https://asciinema.org/a/GXLI6lJhevN9pv40q9vDnenVr.svg)](https://asciinema.org/a/GXLI6lJhevN9pv40q9vDnenVr)
+[![Even Game Demo](https://asciinema.org/a/l7SjsnZlQr7vl21e5EIKwH4OY.svg)](https://asciinema.org/a/l7SjsnZlQr7vl21e5EIKwH4OY)
 #### 2. Calc game
 The user is shown a random mathematical expression, for example 35 + 16, which must be calculated and the correct answer written down.
 
-[![Calc Game Demo](https://asciinema.org/a/BzTgGQ9P3E0FD5mV6u8nxDJjg.svg)](https://asciinema.org/a/BzTgGQ9P3E0FD5mV6u8nxDJjg)
+[![Calc Game Demo](https://asciinema.org/a/Q5eC766zcs4BvPdIdOPk0lniK.svg)](https://asciinema.org/a/Q5eC766zcs4BvPdIdOPk0lniK)
 #### 3. Greatest common divisor game
 The user is shown two random numbers, for example, 25 50. The user must calculate and enter the greatest common divisor of these numbers.
 
-[![GCD Game Demo](https://asciinema.org/a/1NbM7R3yp2Y2bPUXKalRs4gDf.svg)](https://asciinema.org/a/1NbM7R3yp2Y2bPUXKalRs4gDf)
+[![GCD Game Demo](https://asciinema.org/a/OcWOu4J200XoU5yhuDvE0KZDG.svg)](https://asciinema.org/a/OcWOu4J200XoU5yhuDvE0KZDG)
 #### 4. Progression game
 The user is shown an arithmetic progression in which one number is missing. The user must define this number.
 
-[![Progression Game Demo](https://asciinema.org/a/QyyKXB80FVR59Okp8E1nXCsT2.svg)](https://asciinema.org/a/QyyKXB80FVR59Okp8E1nXCsT2)
+[![Progression Game Demo](https://asciinema.org/a/v1Svzum6alRj78mgCU1DH3hLR.svg)](https://asciinema.org/a/v1Svzum6alRj78mgCU1DH3hLR)
 #### 5. Prime game
 The user is shown a random number. And he needs to answer yes if the number is prime, or no if it is not.
 
-[![Prime Game Demo](https://asciinema.org/a/WxMnj6w7BMk2SFVPxVCQAWpNQ.svg)](https://asciinema.org/a/WxMnj6w7BMk2SFVPxVCQAWpNQ)
+[![Prime Game Demo](https://asciinema.org/a/UJvoAFiLE7DZaLmBoWvlD89dt.svg)](https://asciinema.org/a/UJvoAFiLE7DZaLmBoWvlD89dt)
